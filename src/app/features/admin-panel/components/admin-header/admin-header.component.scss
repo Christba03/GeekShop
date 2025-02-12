@@ -11,7 +11,9 @@ $accent: #10B981;  // Green accent color
     border: 3px solid $gray-dark;
     padding: 0.5rem;  /* Reduced padding */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;  /* Change to horizontal layout */
+    justify-content: space-between;  /* Space between items */
+    align-items: center;  /* Vertically align the items */
     border-radius: 20px;
     overflow-y: hidden;  /* Enable vertical scrolling if content exceeds the max height */
     position: fixed;
@@ -20,6 +22,10 @@ $accent: #10B981;  // Green accent color
     z-index: 2;
 }
 
-.searchbar{
-    padding-left: 2rem;
+.searchbar {
+    padding-left: 2rem;  /* Optional padding for the search bar */
+}
+
+.log.out {
+    margin-left: auto;  /* Push the logo to the right */
 }
