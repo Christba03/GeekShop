@@ -76,7 +76,7 @@ export class AdminPanelComponent {
       href: 'admin/promociones',
       subItems: [
         { label: 'Crear promociones', href: 'admin/promociones/crear' },
-        { label: 'Gestionar campañas promocionales', href: 'admin/promociones/campanas' },
+        { label: 'Gestionar campañas ', href: 'admin/promociones/campanas' },
         { label: 'Configurar descuentos por volumen', href: 'admin/promociones/descuentos' },
         { label: 'Análisis de promociones', href: 'admin/promociones/analisis' }
       ]

@@ -8,6 +8,8 @@ import { HoverHighlightDirective } from './directives/hover-highlight.directive'
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { FormLoginRegisterComponent } from './components/form-login-register/form-login-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
+import { BackgroundComponent } from './components/background/background.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar MatSnackBar
 
 
@@ -21,7 +23,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     HoverHighlightDirective,
     CurrencyFormatPipe,
     FormLoginRegisterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SearchbarComponent,
+    BackgroundComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +39,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     RatingComponent,
     HoverHighlightDirective,
     CurrencyFormatPipe,
-    FormLoginRegisterComponent  ,
-    ProductCardComponent
+    FormLoginRegisterComponent,
+    SearchbarComponent,
+    BackgroundComponent
   ]
 })
 export class SharedModule { }

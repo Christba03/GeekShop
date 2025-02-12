@@ -1,12 +1,11 @@
-<div class="admin-layout">
-    <!-- Sidebar fijo a la izquierda -->
-    <app-side-bar [menuItems]="menuItems" [href]="'#'"></app-side-bar>
-  
-    <!-- Contenido principal con la tabla -->
-    <div class="admin-content">
-    <!-- <app-tabla></app-tabla> -->
-    </div>
+<app-background></app-background>
+<!-- Sidebar fijo a la izquierda -->
+
+<app-side-bar [menuItems]="menuItems" [href]="'#'"></app-side-bar>
+
+<div class="admin-content">
+  <app-admin-header></app-admin-header>
+  <div class="main-content">
+    <router-outlet></router-outlet>
   </div>
-  
-  <router-outlet></router-outlet>
-  
+</div>

@@ -11,6 +11,9 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { PromotionBannersComponent } from './pages/promotion-banners/promotion-banners.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
+import { SharedModule } from "../../shared/shared.module";
+import { SearchbarComponent } from '../../shared/components/searchbar/searchbar.component';
 
 
 @NgModule({
@@ -23,15 +26,18 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ClientsComponent,
     EmployeesComponent,
     PromotionBannersComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminHeaderComponent
   ],
   imports: [
     CommonModule,
-    AdminPanelRoutingModule
-  ],
+    AdminPanelRoutingModule,
+    SharedModule
+],
   exports: [
     AdminPanelComponent,
-    SideBarComponent
+    SideBarComponent,
+    AdminHeaderComponent
   ]
 })
 export class AdminPanelModule { }

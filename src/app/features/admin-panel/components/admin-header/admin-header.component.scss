@@ -1,0 +1,21 @@
+$gray-dark: #323232;
+$gray-light: #fff;
+$gray-mid: #E5E7EB;
+$accent: #10B981;  // Green accent color
+
+.header {
+    width: 82vw; /* Full width of the viewport */
+    height: 40px;
+    background-color: #FACDAE; /* Updated background color */
+    box-shadow: 10px 10px $gray-dark;
+    border: 3px solid $gray-dark;
+    padding: 0.5rem;  /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow-y: hidden;  /* Enable vertical scrolling if content exceeds the max height */
+    position: fixed;
+    left: 19rem;  /* Align to the left edge */
+    top: 3px;  /* Align to the top of the page */
+    z-index: 2;
+}
