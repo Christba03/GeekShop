@@ -7,38 +7,39 @@ export class AuthService {
 
   constructor() { }
 
+  // Registrar usuario en localStorage
   register(user: { name: string; email: string; password: string; }) {
-    // Guardamos los datos en localStorage simulando un registro    
     localStorage.setItem('userEmail', user.email);
     localStorage.setItem('userPassword', user.password);
-    localStorage.setItem('Username', user.name);
+    localStorage.setItem('Username', user.name);  // Asegúrate de usar 'Username'
   }
 
-  login(email: string, password: string, name: string): boolean {
+  // Iniciar sesión y verificar las credenciales
+  login(email: string, password: string): string | null {
     const storedEmail = localStorage.getItem('userEmail');
-    const storedPassword = localStorage.getItem('userPassword');   
-    console.log(localStorage.getItem('userName'));   
-    console.log(localStorage.getItem('userPassword'));   
-   
-    if (email === storedEmail && password === storedPassword ) {
-      const token = this.generateToken(name);  // Generar el token
-      this.storeToken(token);  // Almacenar el token en localStorage        
-  
-      return true; // Inicio de sesión exitoso
+    const storedPassword = localStorage.getItem('userPassword');
+
+    // Verificar si las credenciales coinciden
+    if (email === storedEmail && password === storedPassword) {
+      const token = this.generateToken(storedPassword);  // Generar un token basado en el nombre
+      this.storeToken(token);  // Almacenar el token en localStorage
+      return token;  // Devolver el token al componente para usarlo si es necesario
     }
-    return false; // Credenciales incorrectas
+    return null;  // Si las credenciales no coinciden, retornamos null
   }
 
+  // Generar un token (puedes hacerlo más complejo si es necesario)
   generateToken(name: string): string {
-    return btoa(name + ':' + new Date().getTime()); // Genera un token básico con el nombre y el timestamp
+    return btoa(name + ':' + new Date().getTime());  // Token básico con nombre y timestamp
   }
 
+  // Almacenar el token en localStorage
   storeToken(token: string) {
     localStorage.setItem('userToken', token);
   }
 
+  // Cerrar sesión eliminando el token
   logout() {
     localStorage.removeItem('userToken');
   }
-
 }

@@ -24,8 +24,8 @@
   
   .card-side::before {
     position: absolute;
-    content: 'Log in';
-    left: -70px;
+    content: 'Acceso';
+    left: -90px;
     top: 0;
     width: 100px;
     text-decoration: underline;
@@ -35,7 +35,7 @@
   
   .card-side::after {
     position: absolute;
-    content: 'Sign up';
+    content: 'Registro';
     left: 70px;
     top: 0;
     width: 100px;
