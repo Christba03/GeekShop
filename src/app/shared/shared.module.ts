@@ -8,6 +8,7 @@ import { HoverHighlightDirective } from './directives/hover-highlight.directive'
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { FormLoginRegisterComponent } from './components/form-login-register/form-login-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar MatSnackBar
 
 
 
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule, 
   ],
   exports:[
     NavbarComponent,
