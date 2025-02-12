@@ -20,7 +20,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     RatingComponent,
     HoverHighlightDirective,
     CurrencyFormatPipe,
-    FormLoginRegisterComponent
+    FormLoginRegisterComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +35,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     RatingComponent,
     HoverHighlightDirective,
     CurrencyFormatPipe,
-    FormLoginRegisterComponent  
+    FormLoginRegisterComponent  ,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }

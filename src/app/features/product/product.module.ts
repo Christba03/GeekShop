@@ -1,23 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { SharedModule } from '../../shared/shared.module';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ProductCardComponent,
-    ProductPageComponent
+    ProductPageComponent,
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MatToolbarModule,
+    SharedModule,
+    MatCardModule
   ]
 })
 export class ProductModule { }
