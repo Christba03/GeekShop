@@ -25,6 +25,7 @@ import { GenericCardComponent } from './components/generic-card/generic-card.com
     HoverHighlightDirective,
     CurrencyFormatPipe,
     FormLoginRegisterComponent,
+    ProductCardComponent,
     SearchbarComponent,
     BackgroundComponent,
     UserDropdownComponent,
