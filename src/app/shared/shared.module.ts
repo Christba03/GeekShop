@@ -13,6 +13,7 @@ import { BackgroundComponent } from './components/background/background.componen
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
 import { GenericCardComponent } from './components/generic-card/generic-card.component'; // Importar MatSnackBar
+import { LoaderComponent } from './components/loader/loader/loader.component'; // Importar MatSnackBar
 
 
 
@@ -30,6 +31,7 @@ import { GenericCardComponent } from './components/generic-card/generic-card.com
     BackgroundComponent,
     UserDropdownComponent,
     GenericCardComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +48,8 @@ import { GenericCardComponent } from './components/generic-card/generic-card.com
     FormLoginRegisterComponent,
     SearchbarComponent,
     BackgroundComponent,
-    GenericCardComponent
+    GenericCardComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }
