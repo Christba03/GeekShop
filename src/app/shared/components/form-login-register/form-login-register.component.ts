@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../../authentication/services/auth.service';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-form-login-register',
@@ -25,7 +28,11 @@ export class FormLoginRegisterComponent {
   console.log(this.accion);
 }
 
- constructor(private fb: FormBuilder, private authService: AuthService) {}
+ constructor(private fb: FormBuilder, 
+  private authService: AuthService,
+  private router: Router,
+  private snackBar: MatSnackBar // Inyecta MatSnackBar
+  ) {}
 
  ngOnInit(): void {
    // Definir los controles y validaciones para el formulario de Login
@@ -48,35 +55,40 @@ export class FormLoginRegisterComponent {
     login(): void {
       if (this.loginForm.valid) {
         const { email, password } = this.loginForm.value;
-  
+    
         // Llamada al servicio de autenticación
         const token = this.authService.login(email, password);
         if (token) {
           console.log('Login exitoso, token:', token);
-          // Aquí puedes redirigir a la página de inicio o hacer cualquier otra acción
+          this.snackBar.open('Login exitoso', 'Cerrar', { duration: 3000 }); // Mostrar toast de éxito
+          this.router.navigate(['/products']);  // Redirige a la página de productos
         } else {
           console.log('Credenciales incorrectas');
-          // Mostrar mensaje de error al usuario
+          this.snackBar.open('Credenciales incorrectas', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] }); // Mostrar toast de error
         }
       } else {
         console.log('Formulario de login no válido');
+        this.snackBar.open('Por favor, llena todos los campos correctamente', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] });
       }
     }
-  
-    // Lógica para manejar el envío del formulario de Registro
+    
     register(): void {
       if (this.registerForm.valid) {
         const { fullName, email, password } = this.registerForm.value;
         const user = { name: fullName, email, password };
-  
+    
         // Llamada al servicio de registro
         this.authService.register(user);
-        this.accion = 'Iniciar sesión'; // Cambia el valor de accion
+        this.accion = 'Iniciar sesión'; // Cambia el valor de acción para cambiar a modo de login
         console.log('Registro exitoso');
-        // Aquí puedes redirigir al login o a una página de bienvenida
+        
+        this.snackBar.open('Registro exitoso', 'Cerrar', { duration: 3000 }); // Mostrar toast de éxito
+        this.registerForm.reset(); // Esto borra los datos ingresados en los inputs
+        this.router.navigate(['/login']);  // Redirige a la página de login después de registrarse
       } else {
         console.log('Formulario de registro no válido');
+        this.snackBar.open('Por favor, llena todos los campos correctamente', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] });
       }
     }
-
+    
 }

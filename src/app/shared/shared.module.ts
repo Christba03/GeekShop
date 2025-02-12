@@ -10,6 +10,8 @@ import { FormLoginRegisterComponent } from './components/form-login-register/for
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar MatSnackBar
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { BackgroundComponent } from './components/background/background.componen
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule, 
   ],
   exports:[
     NavbarComponent,
