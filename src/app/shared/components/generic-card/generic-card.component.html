@@ -1,14 +1,18 @@
 <div class="card" [ngStyle]="{ 'width': width, 'height': height, 'background-color': backgroundColor }">
-    <div class="title">
-      <p class="title-text">{{ title }}</p>
+  <div class="title">
+    <p class="title-text">{{ title }}</p>
+  </div>
+
+  <div class="data">
+    <!-- Avatar generado dinámicamente -->
+    <div class="avatar-container">
+      <img [src]="avatarImageUrl" alt="Avatar" />
     </div>
-    
-    <div class="data">
-      <p>{{ data | number }}</p> <!-- Format number -->
-  
-      <div class="range">
-        <div class="fill" [ngStyle]="{ 'width': progress + '%' }"></div>
-      </div>
+
+    <p>{{ data | number }}</p> <!-- Formato de número -->
+
+    <div class="range">
+      <div class="fill" [style.width]="progress + '%'"></div>
     </div>
   </div>
-  
+</div>

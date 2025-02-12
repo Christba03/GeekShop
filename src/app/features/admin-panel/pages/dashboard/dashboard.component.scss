@@ -1,0 +1,12 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;           /* Permite que las tarjetas se acomoden en nuevas filas */
+    justify-content: space-evenly; /* Espaciado uniforme entre las tarjetas */
+    gap: 20px;                 /* Espacio entre las tarjetas */
+  }
+  
+  app-generic-card {
+    flex: 1 1 300px;  /* Cada tarjeta ocupará al menos 300px y se expandirá si es necesario */
+    max-width: 500px; /* Establece un límite máximo para el ancho de cada tarjeta */
+  }
+  
