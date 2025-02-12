@@ -5,20 +5,22 @@ $accent: #10B981;  // Green accent color
 
 .sidebar {
   width: 250px;
+  min-height: 900px;
   max-height: 1080px;  // Set the maximum height to 1080px
   height: auto;  // This ensures that the height adjusts based on the content but doesn't exceed the max-height
   background-color: $gray-light;
   box-shadow: 10px 10px $gray-dark;
   border: 3px solid $gray-dark;
-  padding: 1rem;
+  padding: 0.5rem;  // Reduced padding
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   overflow-y: auto;  // Enable vertical scrolling if content exceeds the max height
+  background-color:#B5DADE;
 
   .sidebar-header {
-    margin-bottom: 2rem;
-    padding: 1rem;
+    margin-bottom: 1rem;  // Reduced margin-bottom
+    padding: 0.5rem;  // Reduced padding
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
@@ -33,29 +35,31 @@ $accent: #10B981;  // Green accent color
     padding: 0;
 
     li {
-      margin: 1rem 0;
+      margin: 0.5rem 0;  // Reduced margin
 
       a {
         display: flex;
         align-items: center;
         text-decoration: none;
         color: $gray-dark;
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
+        padding: 0.5rem 0.75rem;  // Reduced padding
+        font-size: 0.875rem;  // Slightly reduced font size
         font-weight: 600;
         border-radius: 12px;
         border: 2px solid transparent;
         transition: all 0.3s ease;
+        background-color: #7ccad3;
+
 
         &:hover {
-          background-color: $gray-mid;
-          border-color: $accent;
-          color: $accent;
+          background-color: #FACDAE;
+          border-color: black;
+          color: black;
         }
 
         i {
-          margin-right: 1rem;
-          font-size: 1.25rem;
+          margin-right: 0.75rem;  // Reduced margin
+          font-size: 1.125rem;  // Slightly reduced font size
         }
       }
     }
@@ -63,7 +67,7 @@ $accent: #10B981;  // Green accent color
 }
 
 .sidebar-header h2 {
-  font-size: 20px;
+  font-size: 18px;  // Reduced font size
   color: $gray-dark;
   letter-spacing: 2px;
   font-weight: bold;
@@ -71,14 +75,14 @@ $accent: #10B981;  // Green accent color
 }
 
 .sidebar-menu li a {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;  // Reduced padding
   background-color: $gray-light;
   color: $gray-dark;
   border-radius: 10px;
   border: 2px solid $gray-dark;
   box-shadow: 4px 4px $gray-dark;
   transition: 0.2s ease;
-  font-size: 14px;
+  font-size: 0.875rem;  // Reduced font size
   font-weight: 600;
 
   &:hover {
@@ -87,6 +91,6 @@ $accent: #10B981;  // Green accent color
   }
 
   i {
-    font-size: 20px;
+    font-size: 1.125rem;  // Reduced font size
   }
 }
