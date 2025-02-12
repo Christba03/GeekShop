@@ -1,0 +1,25 @@
+$gray-dark: #323232;
+$gray-light: #fff;
+$gray-mid: #E5E7EB;
+$accent: #10B981;  // Green accent color
+
+.main-content {
+  width: 82vw;
+  height: 88vh;
+  background-color: #CCE0D4;
+  box-shadow: 10px 10px $gray-dark;
+  border: 3px solid $gray-dark;
+  padding: 1rem;
+  display: grid;
+  
+  /* Grid setup with 4 columns, each card takes up 4fr */
+  grid-template-columns: repeat(4, 1fr);  /* 4 columns of equal width */
+  gap: 1rem;  /* Space between cards */
+  
+  border-radius: 20px;
+  overflow-y: auto;
+  position: fixed;
+  left: 19rem;
+  top: 5rem;
+  z-index: 1;
+}

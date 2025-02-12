@@ -1,5 +1,5 @@
 .card {
-    padding: 1rem;
+    padding: 2rem;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 10px 10px #323232;
@@ -17,16 +17,16 @@
   
   .title span {
     position: relative;
-    padding: 0.5rem;
+    padding: 0.3rem;
     background-color: #10B981;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.0rem;
+    height: 1.0rem;
     border-radius: 9999px;
   }
   
   .title span svg {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
@@ -34,13 +34,13 @@
   }
   
   .title-text {
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     color: #374151;
     font-size: 18px;
   }
   
   .percent {
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     color: #02972f;
     font-weight: 600;
     display: flex;
@@ -53,8 +53,8 @@
   }
   
   .data p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
     color: #1F2937;
     font-size: 2.25rem;
     line-height: 2.5rem;

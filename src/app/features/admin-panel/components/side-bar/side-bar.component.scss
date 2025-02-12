@@ -31,6 +31,9 @@ $accent: #10B981;  // Green accent color
     display: flex;
     flex-direction: column;
     list-style: none;
+    padding: 0; // Ensure no extra padding around the list
+    margin: 0;  // Ensure no extra margin
+    width: 100%;  // Take up full width of the sidebar container
 
     li {
       margin: 0.5rem 0;  // Reduced margin
@@ -55,10 +58,7 @@ $accent: #10B981;  // Green accent color
           color: black;
         }
 
-        i {
-          margin-right: 0.75rem;  // Reduced margin
-          font-size: 1.125rem;  // Slightly reduced font size
-        }
+
       }
     }
   }

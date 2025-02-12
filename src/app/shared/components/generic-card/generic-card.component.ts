@@ -15,7 +15,7 @@ export class GenericCardComponent implements OnInit {
 
   backgroundColor: string = ''; // ✅ Declare the property here
 
-  private colors: string[] = ['#F87171', '#FBBF24', '#34D399', '#60A5FA', '#A78BFA', '#F472B6'];
+  private colors: string[] = ['#cce0d4', '#ECF5F0', '#B5DADE', '#FFF8C1', '#FACDAE'];
 
   ngOnInit() {
     this.backgroundColor = this.getRandomColor(); // ✅ Assign a random color on init

@@ -20,19 +20,22 @@ $accent: #10B981;  // Green accent color
   }
 
 
-  .main-content {
+.main-content {
     width: 82vw; /* Full width of the viewport */
     height: 88vh;
     background-color: #CCE0D4; /* Updated background color */
     box-shadow: 10px 10px $gray-dark;
     border: 3px solid $gray-dark;
-    padding: 0.5rem;  /* Reduced padding */
+    padding: 0.5rem; /* Reduced padding */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* ✅ Cards stack vertically */
+    align-items: center; /* ✅ Center cards horizontally */
+    justify-content: flex-start; /* ✅ Start filling from the top */
+    gap: 1rem; /* ✅ Add spacing between cards */
     border-radius: 20px;
-    overflow-y: hidden;  /* Enable vertical scrolling if content exceeds the max height */
+    overflow-y: auto; /* ✅ Enable vertical scrolling if needed */
     position: fixed;
-    left: 19rem;  /* Align to the left edge */
-    top: 5rem;  /* Align to the top of the page */
+    left: 19rem; /* Align to the left edge */
+    top: 5rem; /* Align to the top of the page */
     z-index: 1;
 }
