@@ -17,7 +17,7 @@ const routes: Routes = [
     { path: 'pedidos', component: OrdersComponent },
     { path: 'productos', component: ProductsComponent },
     { path: 'dashboard', component: DashboardComponent },
-    { path: '**', redirectTo: 'products' } // Redirección por defecto
+    { path: '**', redirectTo: 'dashboard' } // Redirección por defecto
   ]}
 ];
 @NgModule({

@@ -6,7 +6,7 @@
       border: 2px solid var(--white-30);
       border-radius: calc(var(--roundness) - 2px);
       position: fixed;
-      overflow: hidden;
+      overflow:visible;
       animation: colorChange 6s infinite alternate;
     z-index: -2;
     
@@ -22,7 +22,7 @@
     background-position: 0 0, 4px 4px;
     background-size: 16px 16px; /* Increased size for bigger dots */
     mix-blend-mode: hard-light;
-    animation: dots 0.5s infinite linear, colorChange 3s infinite alternate;
+    animation: dots 0.3s infinite linear, colorChange 3s infinite alternate;
   }
   
   @keyframes colorChange {
