@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent {
+  isLoading = true;
 
+  constructor() {
+    setTimeout(() => {
+      this.isLoading = false; // Simula la carga
+    }, 4000);
+  }
 }

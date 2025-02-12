@@ -10,7 +10,8 @@ import { FormLoginRegisterComponent } from './components/form-login-register/for
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
 import { BackgroundComponent } from './components/background/background.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar MatSnackBar
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoaderComponent } from './components/loader/loader/loader.component'; // Importar MatSnackBar
 
 
 
@@ -25,7 +26,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     FormLoginRegisterComponent,
     ProductCardComponent,
     SearchbarComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'; // Importar Mat
     CurrencyFormatPipe,
     FormLoginRegisterComponent,
     SearchbarComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

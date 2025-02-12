@@ -12,6 +12,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './form-login-register.component.scss'
 })
 export class FormLoginRegisterComponent {
+  isLoading: boolean = false; // Variable para el loader
+
  // FormGroup para el login
  loginForm!: FormGroup;
   
@@ -54,20 +56,22 @@ export class FormLoginRegisterComponent {
     // Lógica para manejar el envío del formulario de Login
     login(): void {
       if (this.loginForm.valid) {
+        this.isLoading = true; // Muestra el loader
         const { email, password } = this.loginForm.value;
-    
-        // Llamada al servicio de autenticación
+  
         const token = this.authService.login(email, password);
         if (token) {
-          console.log('Login exitoso, token:', token);
-          this.snackBar.open('Login exitoso', 'Cerrar', { duration: 3000 }); // Mostrar toast de éxito
-          this.router.navigate(['/products']);  // Redirige a la página de productos
+          
+          // Simula un pequeño retraso antes de la redirección
+          setTimeout(() => {
+            this.router.navigate(['/products']);
+            this.isLoading = false; // Oculta el loader
+          }, 2000);
         } else {
-          console.log('Credenciales incorrectas');
-          this.snackBar.open('Credenciales incorrectas', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] }); // Mostrar toast de error
+          this.isLoading = false; // Oculta el loader en caso de error
+          this.snackBar.open('Credenciales incorrectas', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] });
         }
       } else {
-        console.log('Formulario de login no válido');
         this.snackBar.open('Por favor, llena todos los campos correctamente', 'Cerrar', { duration: 3000, panelClass: ['error-snackbar'] });
       }
     }

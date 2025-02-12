@@ -195,3 +195,24 @@
     color: var(--font-color);
     cursor: pointer;
   } 
+
+ 
+  /* Asegúrate de que el contenedor de la página ocupe toda la pantalla */
+.background {
+  position: fixed; /* Fijar el fondo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  justify-content: center; /* Centra el fondo horizontalmente */
+  align-items: center; /* Centra el fondo verticalmente */
+  z-index: -1; /* Asegura que el fondo quede detrás de los elementos del contenido */
+}
+
+/* Si el fondo es una imagen, asegúrate de que se cubra toda la pantalla */
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+}

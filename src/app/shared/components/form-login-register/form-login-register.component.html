@@ -1,11 +1,20 @@
-<div class="wrapper">
+<app-background class="background"></app-background>
+
+<!-- Mostrar el loader cuando esté en proceso de carga -->
+<app-loader *ngIf="isLoading"></app-loader>
+
+<!-- Mostrar el formulario solo cuando no esté cargando -->
+<div *ngIf="!isLoading">
+  <div class="wrapper">
     <div class="card-switch">
       <label class="switch">
         <input class="toggle" type="checkbox" (change)="toggleAction()">
 
         <span class="slider"></span>
         <span class="card-side"></span>
+        
         <div class="flip-card__inner">
+          
           <!-- Formulario de Login -->
           <div class="flip-card__front">
             <div class="title">Inicia sesión</div>
@@ -15,7 +24,7 @@
               <button class="flip-card__btn" (click)="login()">Confirmar!</button>
             </form>
           </div>
-  
+
           <!-- Formulario de Registro -->
           <div class="flip-card__back">
             <div class="title">Regístrate</div>
@@ -26,8 +35,9 @@
               <button class="flip-card__btn" (click)="register()">Confirmar!</button>
             </form>
           </div>
+
         </div>
       </label>
     </div>
   </div>
-  
+</div>
