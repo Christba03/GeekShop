@@ -1,0 +1,38 @@
+.admin-layout {
+    display: flex;
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100vw; /* Ocupa toda la pantalla */
+      background-color: var(--yellow-400);
+      border: 2px solid var(--white-30);
+      border-radius: calc(var(--roundness) - 2px);
+      position: fixed;
+      overflow: hidden;
+      animation: colorChange 6s infinite alternate;
+    z-index: -2;
+    
+  }
+  .admin-layout::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.375rem;
+    opacity: 0.5;
+    background-image: radial-gradient(#ffcc33 20%, transparent 20%),
+      radial-gradient(#ff9933 20%, transparent 20%);
+    background-position: 0 0, 4px 4px;
+    background-size: 16px 16px; /* Increased size for bigger dots */
+    mix-blend-mode: hard-light;
+    animation: dots 0.5s infinite linear, colorChange 3s infinite alternate;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      background-color: #ffcc33; /* Yellow */
+    }
+    50% {
+      background-color: #ff9c00; /* Orange */
+    }
+    100% {
+      background-color: #ffdb4a; /* Yellow */
+    }
+  }

@@ -1,0 +1,17 @@
+
+  
+
+  .admin-content {
+    flex-grow: 1;
+    padding: 40px; /* Más espacio alrededor del contenido */
+    margin-left: 280px; /* Ajuste por el sidebar más ancho */
+    max-width: 1400px; /* Más ancho el contenido */
+    width: calc(100% - 280px);
+    font-size: 20px; /* Aumentar tamaño de texto en general */
+   
+    /* Fondo con imagen */
+  background-image: url('/recursos/images/br.jpg');
+  background-size: cover; /* Para que cubra todo */
+  background-position: center;
+  background-repeat: no-repeat;
+  }

@@ -1,23 +1,22 @@
 <aside class="sidebar">
-    <div class="sidebar-header">
-      <h2>Panel Administrativo</h2>
-    </div>
-    <ul class="sidebar-menu">
-      <li
-        *ngFor="let item of menuItems"
-        class="has-dropdown"
-        [ngClass]="{ opened: item.open }"
-      >
-        <i *ngIf="item.icon" [class]="item.icon"></i>
-        <a [href]="item.href" (click)="toggleDropdown(item)">
-          {{ item.label }}
-        </a>
-        <ul class="sidebar-dropdown list-unstyled" *ngIf="item.open">
-          <li *ngFor="let subItem of item.subItems">
-            <a [href]="subItem.href">{{ subItem.label }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </aside>
-  
+  <div class="sidebar-header">
+    <h2>Panel Administrativo</h2>
+  </div>
+  <ul class="sidebar-menu">
+    <li
+      *ngFor="let item of menuItems"
+      class="has-dropdown"
+      [ngClass]="{ opened: item.open }"
+    >
+      <i *ngIf="item.icon" [class]="item.icon"></i>
+      <a href="javascript:void(0)" (click)="toggleDropdown(item)">
+        {{ item.label }}
+      </a>
+      <ul class="sidebar-dropdown list-unstyled" *ngIf="item.open">
+        <li *ngFor="let subItem of item.subItems">
+          <a href="{{ subItem.href }}">{{ subItem.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>
