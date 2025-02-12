@@ -1,13 +1,11 @@
 <app-background></app-background>
-    <!-- Sidebar fijo a la izquierda -->
+<!-- Sidebar fijo a la izquierda -->
 
-    <app-side-bar [menuItems]="menuItems" [href]="'#'"></app-side-bar>
+<app-side-bar [menuItems]="menuItems" [href]="'#'"></app-side-bar>
 
-    <div class="admin-content">
-      <app-admin-header></app-admin-header>
-
-      <router-outlet></router-outlet>
-
-    </div>
-
-  
+<div class="admin-content">
+  <app-admin-header></app-admin-header>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

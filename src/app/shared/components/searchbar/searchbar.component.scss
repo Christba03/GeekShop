@@ -6,7 +6,8 @@ $accent: #10B981;  // Green accent color
 
 /* faster and brutal animation */
 .input {
-    max-width: 40vw ;
+    width: 100%;
+    max-width: 90vw ;
     height: 25px;
     padding: 2px;
     font-size: 18px;
@@ -38,7 +39,6 @@ $accent: #10B981;  // Green accent color
   .input {
 
     font-size: 18px;
-    font-family: "Courier New", monospace;
     color: #000;
     background-color: #fff;
     border: 4px solid $gray-dark;
