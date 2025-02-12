@@ -7,6 +7,7 @@ import { RatingComponent } from './components/rating/rating.component';
 import { HoverHighlightDirective } from './directives/hover-highlight.directive';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { FormLoginRegisterComponent } from './components/form-login-register/form-login-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { FormLoginRegisterComponent } from './components/form-login-register/for
     FormLoginRegisterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports:[
     NavbarComponent,
