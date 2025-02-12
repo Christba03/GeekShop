@@ -1,56 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
   standalone: false,
   templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.scss'
+  styleUrls: ['./side-bar.component.scss']  // Fix to 'styleUrls' (plural)
 })
 export class SideBarComponent {
-  menuItems = [
-    {
-      label: 'Calendar',
-      icon: 'uil-calendar-alt',
-      open: false,
-      subItems: ['Lorem ipsum', 'ipsum dolor', 'dolor ipsum', 'amet consectetur', 'ipsum dolor sit']
-    },
-    {
-      label: 'Usuarios',
-      icon: 'fas fa-users',
-      open: false,
-      subItems: []
-    },
-    {
-      label: 'Empleados',
-      icon: 'fas fa-user-tie',
-      open: false,
-      subItems: []
-    },
-    {
-      label: 'Clientes',
-      icon: 'fas fa-users',
-      open: false,
-      subItems: []
-    },
-    {
-      label: 'Productos',
-      icon: 'fas fa-cogs',
-      open: false,
-      subItems: []
-    },
-    {
-      label: 'Pedidos',
-      icon: 'fas fa-box',
-      open: false,
-      subItems: []
-    },
-    {
-      label: 'Ventas',
-      icon: 'fas fa-chart-line',
-      open: false,
-      subItems: []
-    }
-  ];
+  @Input() href: string = '';  // Corrected the @Input decorator
+
+  @Input() menuItems: any[] = []; // This will accept menu items from the parent component.
+
 
   toggleDropdown(item: any): void {
     // Close all other dropdowns

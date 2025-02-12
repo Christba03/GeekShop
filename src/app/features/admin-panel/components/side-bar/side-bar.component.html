@@ -3,15 +3,18 @@
       <h2>Panel Administrativo</h2>
     </div>
     <ul class="sidebar-menu">
-      <li><a href="admin/usuarios"><i class="fas fa-users"></i> Usuarios</a></li>
-      <li *ngFor="let item of menuItems" class="has-dropdown" [ngClass]="{'opened': item.open}">
-        <i class="uil-calendar-alt" *ngIf="item.icon"></i>
-        <a href="javascript:void(0);" (click)="toggleDropdown(item)">
+      <li
+        *ngFor="let item of menuItems"
+        class="has-dropdown"
+        [ngClass]="{ opened: item.open }"
+      >
+        <i *ngIf="item.icon" [class]="item.icon"></i>
+        <a [href]="item.href" (click)="toggleDropdown(item)">
           {{ item.label }}
         </a>
         <ul class="sidebar-dropdown list-unstyled" *ngIf="item.open">
           <li *ngFor="let subItem of item.subItems">
-            <a href="#">{{ subItem }}</a>
+            <a [href]="subItem.href">{{ subItem.label }}</a>
           </li>
         </ul>
       </li>
